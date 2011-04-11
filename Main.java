@@ -17,7 +17,7 @@ public class Main {
      * @param args the command line arguments
      */
 
-    public static void test1(){
+    public static ArrayList initialisation(){
 
         ArrayList listeStations = null;
         
@@ -39,7 +39,7 @@ public class Main {
         listeStations.add(s8);
         Station s9 = new Station("numero9",8,12);
         listeStations.add(s9);
-
+		return listeStations;
 
         Voie v1_2 = new Voie(s1,s2,2);
 
@@ -98,7 +98,9 @@ public class Main {
 
         s9.ajouterVoie(v9_3);
         s9.ajouterVoie(v9_8);
-
+}
+		public void initialiserLigne(ArrayList listeStations){
+		
         Ligne l1Aller = new Ligne("Ligne 1 vers 8", 1);
         Ligne l1Retour = new Ligne("Ligne 8 vers 1", 1);
         Ligne l2Aller = new Ligne("Ligne 3 vers 7", 1);
@@ -106,41 +108,49 @@ public class Main {
         Ligne l3Aller = new Ligne("Ligne 3 vers 6", 1);
         Ligne l3Retour = new Ligne("Ligne 6 vers 3", 1);
 
-        l1Aller.ajouterStation(s1);
-        l1Aller.ajouterStation(s2);
-        l1Aller.ajouterStation(s5);
-        l1Aller.ajouterStation(s8);
-        l1Retour.ajouterStation(s8);
-        l1Retour.ajouterStation(s5);
-        l1Retour.ajouterStation(s2);
-        l1Retour.ajouterStation(s1);
+        l1Aller.ajouterStation(listeStation.get(0));
+        l1Aller.ajouterStation(listeStation.get(1));
+        l1Aller.ajouterStation(listeStation.get(4));
+        l1Aller.ajouterStation(listeStation.get(7));
+        l1Retour.ajouterStation(listeStation.get(7));
+        l1Retour.ajouterStation(listeStation.get(4));
+        l1Retour.ajouterStation(listeStation.get(1));
+        l1Retour.ajouterStation(listeStation.get(0));
 
-        l2Aller.ajouterStation(s3);
-        l2Aller.ajouterStation(s2);
-        l2Aller.ajouterStation(s4);
-        l2Aller.ajouterStation(s7);
-        l2Retour.ajouterStation(s7);
-        l2Retour.ajouterStation(s4);
-        l2Retour.ajouterStation(s2);
-        l2Retour.ajouterStation(s3);
+        l2Aller.ajouterStation(listeStation.get(2));
+        l2Aller.ajouterStation(listeStation.get(1));
+        l2Aller.ajouterStation(listeStation.get(3));
+        l2Aller.ajouterStation(listeStation.get(6));
+        l2Retour.ajouterStation(listeStation.get(6));
+        l2Retour.ajouterStation(listeStation.get(3));
+        l2Retour.ajouterStation(listeStation.get(1));
+        l2Retour.ajouterStation(listeStation.get(2));
 
-        l3Aller.ajouterStation(s3);
-        l3Aller.ajouterStation(s9);
-        l3Aller.ajouterStation(s8);
-        l3Aller.ajouterStation(s7);
-        l3Aller.ajouterStation(s6);
-        l3Retour.ajouterStation(s6);
-        l3Retour.ajouterStation(s7);
-        l3Retour.ajouterStation(s8);
-        l3Retour.ajouterStation(s9);
-        l3Retour.ajouterStation(s3);
-
+        l3Aller.ajouterStation(listeStation.get(2));
+        l3Aller.ajouterStation(listeStation.get(8));
+        l3Aller.ajouterStation(listeStation.get(7));
+        l3Aller.ajouterStation(listeStation.get(6));
+        l3Aller.ajouterStation(listeStation.get(5));
+        l3Retour.ajouterStation(listeStation.get(5));
+        l3Retour.ajouterStation(listeStation.get(6));
+        l3Retour.ajouterStation(listeStation.get(7));
+        l3Retour.ajouterStation(listeStation.get(8));
+        l3Retour.ajouterStation(listeStation.get(2));
+}	
+		
+}
 
     }
     public static void main(String[] args) {
-        // TODO code application logic here
-
-        test1();
+		ArrayList listeStations = new ArrayList();
+        listeStations = initialisation();
+		initialisationLigne(listeStations);
+		
+		
+		
+		
+		
+		
     }
 
 
