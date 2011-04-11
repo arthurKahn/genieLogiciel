@@ -39,7 +39,7 @@ public class Main {
         listeStations.add(s8);
         Station s9 = new Station("numero9",8,12);
         listeStations.add(s9);
-		return listeStations;
+		
 
         Voie v1_2 = new Voie(s1,s2,2);
 
@@ -98,8 +98,10 @@ public class Main {
 
         s9.ajouterVoie(v9_3);
         s9.ajouterVoie(v9_8);
-}
-		public void initialiserLigne(ArrayList listeStations){
+
+        return listeStations;
+    }
+    public static void initialiserLigne(ArrayList<Station> listeStation){
 		
         Ligne l1Aller = new Ligne("Ligne 1 vers 8", 1);
         Ligne l1Retour = new Ligne("Ligne 8 vers 1", 1);
@@ -135,19 +137,13 @@ public class Main {
         l3Retour.ajouterStation(listeStation.get(6));
         l3Retour.ajouterStation(listeStation.get(7));
         l3Retour.ajouterStation(listeStation.get(8));
-        l3Retour.ajouterStation(listeStation.get(2));
-}	
-		
+        l3Retour.ajouterStation(listeStation.get(2));	
 }
 
-    }
     public static void main(String[] args) {
-		ArrayList listeStations = new ArrayList();
+	ArrayList<Station> listeStations = new ArrayList<Station>();
         listeStations = initialisation();
-		initialisationLigne(listeStations);
-		
-		
-		
+	initialiserLigne(listeStations);
 		
 		
 		
