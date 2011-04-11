@@ -37,7 +37,7 @@ public class Main {
         listeStations.add(s7);
         Station s8 = new Station("numero8",5,9);
         listeStations.add(s8);
-        Station s9 = new Station("numero9",8,12);
+		Station s9 = new Station("numero9",8,12);
         listeStations.add(s9);
 		
 
@@ -140,25 +140,11 @@ public class Main {
 
         l3Retour.ajouterStation(listeStation.get(2));
 }	
-		
-
-        l3Retour.ajouterStation(listeStation.get(2));	
-}
 
 
     public static void main(String[] args) {
-	ArrayList<Station> listeStations = new ArrayList<Station>();
-        listeStations = initialisation();
-
+		ArrayList<Station> listeStations = new ArrayList<Station>();
+		listeStations = initialisation();
 		initialisationLigne(listeStations);
-
-
-	initialiserLigne(listeStations);
-		
-		
-		   }
-
-
-
-
+	}	   
 }
