@@ -138,19 +138,13 @@ public class Main {
         l3Retour.ajouterStation(listeStation.get(2));
 }	
 		
-}
 
     }
     public static void main(String[] args) {
 		ArrayList listeStations = new ArrayList();
         listeStations = initialisation();
 		initialisationLigne(listeStations);
-		
-		
-		
-		
-		
-		
+
     }
 
 
