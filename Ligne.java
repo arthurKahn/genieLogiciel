@@ -16,6 +16,6 @@ public class Ligne {
     private int numero;
     private ArrayList<Station> listeStation;
     private int heureDepart; //En minutes
-
+	
 
 }
