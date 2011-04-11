@@ -41,46 +41,99 @@ public class Main {
         listeStations.add(s9);
 
 
-        Voie v1 = new Voie(s1,s2,2);
-        Voie v2 = new Voie(s2,s3,3);
-        Voie v3 = new Voie(s2,s4,1);
-        Voie v4 = new Voie(s2,s5,2);
-        Voie v5 = new Voie(s5,s8,3);
-        Voie v6 = new Voie(s4,s7,3);
-        Voie v7 = new Voie(s6,s7,2);
-        Voie v8 = new Voie(s7,s8,5);
-        Voie v9 = new Voie(s8,s9,4);
-        Voie v10 = new Voie(s9,s3,6);
+        Voie v1_2 = new Voie(s1,s2,2);
 
-        s1.ajouterVoie(v1);
+        Voie v2_1 = new Voie(s2,s1,2);
+        Voie v2_3 = new Voie(s2,s3,3);
+        Voie v2_4 = new Voie(s2,s4,1);
+        Voie v2_5 = new Voie(s2,s5,2);
 
-        s2.ajouterVoie(v1);
-        s2.ajouterVoie(v2);
-        s2.ajouterVoie(v3);
-        s2.ajouterVoie(v4);
+        Voie v3_2 = new Voie(s3,s2,3);
+        Voie v3_9 = new Voie(s3,s9,5);
 
-        s3.ajouterVoie(v2);
-        s3.ajouterVoie(v10);
+        Voie v4_2 = new Voie(s4,s2,1);
+        Voie v4_7 = new Voie(s4,s7,3);
 
-        s4.ajouterVoie(v3);
-        s4.ajouterVoie(v6);
+        Voie v5_2 = new Voie(s5,s2,2);
+        Voie v5_8 = new Voie(s5,s8,3);
+        
+        Voie v6_7 = new Voie(s6,s7,2);
 
-        s5.ajouterVoie(v4);
-        s5.ajouterVoie(v5);
+        Voie v7_4 = new Voie(s7,s4,3);
+        Voie v7_6 = new Voie(s7,s6,3);
+        Voie v7_8 = new Voie(s7,s8,5);
 
-        s6.ajouterVoie(v7);
+        Voie v8_5 = new Voie(s8,s5,3);
+        Voie v8_7 = new Voie(s8,s7,5);
+        Voie v8_9 = new Voie(s8,s9,4);
 
-        s7.ajouterVoie(v6);
-        s7.ajouterVoie(v7);
-        s7.ajouterVoie(v8);
+        Voie v9_3 = new Voie(s9,s3,5);
+        Voie v9_8 = new Voie(s9,s8,4);
 
-        s8.ajouterVoie(v5);
-        s8.ajouterVoie(v8);
-        s8.ajouterVoie(v9);
+        s1.ajouterVoie(v1_2);
 
-        s9.ajouterVoie(v9);
-        s9.ajouterVoie(v10);
+        s2.ajouterVoie(v2_1);
+        s2.ajouterVoie(v2_3);
+        s2.ajouterVoie(v2_4);
+        s2.ajouterVoie(v2_5);
 
+        s3.ajouterVoie(v3_2);
+        s3.ajouterVoie(v3_9);
+
+        s4.ajouterVoie(v4_2);
+        s4.ajouterVoie(v4_7);
+
+        s5.ajouterVoie(v5_2);
+        s5.ajouterVoie(v5_8);
+
+        s6.ajouterVoie(v6_7);
+
+        s7.ajouterVoie(v7_4);
+        s7.ajouterVoie(v7_6);
+        s7.ajouterVoie(v7_8);
+
+        s8.ajouterVoie(v8_5);
+        s8.ajouterVoie(v8_7);
+        s8.ajouterVoie(v8_9);
+
+        s9.ajouterVoie(v9_3);
+        s9.ajouterVoie(v9_8);
+
+        Ligne l1Aller = new Ligne("Ligne 1 vers 8", 1);
+        Ligne l1Retour = new Ligne("Ligne 8 vers 1", 1);
+        Ligne l2Aller = new Ligne("Ligne 3 vers 7", 1);
+        Ligne l2Retour = new Ligne("Ligne 7 vers 3", 1);
+        Ligne l3Aller = new Ligne("Ligne 3 vers 6", 1);
+        Ligne l3Retour = new Ligne("Ligne 6 vers 3", 1);
+
+        l1Aller.ajouterStation(s1);
+        l1Aller.ajouterStation(s2);
+        l1Aller.ajouterStation(s5);
+        l1Aller.ajouterStation(s8);
+        l1Retour.ajouterStation(s8);
+        l1Retour.ajouterStation(s5);
+        l1Retour.ajouterStation(s2);
+        l1Retour.ajouterStation(s1);
+
+        l2Aller.ajouterStation(s3);
+        l2Aller.ajouterStation(s2);
+        l2Aller.ajouterStation(s4);
+        l2Aller.ajouterStation(s7);
+        l2Retour.ajouterStation(s7);
+        l2Retour.ajouterStation(s4);
+        l2Retour.ajouterStation(s2);
+        l2Retour.ajouterStation(s3);
+
+        l3Aller.ajouterStation(s3);
+        l3Aller.ajouterStation(s9);
+        l3Aller.ajouterStation(s8);
+        l3Aller.ajouterStation(s7);
+        l3Aller.ajouterStation(s6);
+        l3Retour.ajouterStation(s6);
+        l3Retour.ajouterStation(s7);
+        l3Retour.ajouterStation(s8);
+        l3Retour.ajouterStation(s9);
+        l3Retour.ajouterStation(s3);
 
 
     }
