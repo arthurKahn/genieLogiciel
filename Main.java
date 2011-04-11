@@ -105,10 +105,10 @@ public class Main {
 		
         Ligne l1Aller = new Ligne("Ligne 1 vers 8", 1);
         Ligne l1Retour = new Ligne("Ligne 8 vers 1", 1);
-        Ligne l2Aller = new Ligne("Ligne 3 vers 7", 1);
-        Ligne l2Retour = new Ligne("Ligne 7 vers 3", 1);
-        Ligne l3Aller = new Ligne("Ligne 3 vers 6", 1);
-        Ligne l3Retour = new Ligne("Ligne 6 vers 3", 1);
+        Ligne l2Aller = new Ligne("Ligne 3 vers 7", 2);
+        Ligne l2Retour = new Ligne("Ligne 7 vers 3", 2);
+        Ligne l3Aller = new Ligne("Ligne 3 vers 6", 3);
+        Ligne l3Retour = new Ligne("Ligne 6 vers 3", 3);
 
         l1Aller.ajouterStation(listeStation.get(0));
         l1Aller.ajouterStation(listeStation.get(1));
@@ -141,10 +141,36 @@ public class Main {
         l3Retour.ajouterStation(listeStation.get(2));
 }	
 
+		public static menu(ArrayList<Station> listeStations){
+			int choix = 0;
+			while (choix != 9){
+				System.out.println("Bienvenue, que souhaitez vous faire ? ");
+				System.out.println("[1] Trouvez la station de metro la plus proche ");			
+				
+				Scanner sc = new Scanner(System.in);
+				
+				switch (choix){
+					case 1 : 
+					int x,y;
+					Stations stationLaPlusProche;
+					System.out.println("Coordonnée X: ");
+					x= sc.nextInt();
+					System.out.println("Coordonnée Y: ");
+					y= sc.nextInt();
+					Itineraire instance = new Itineraire();
+					Point coordonnees = new Point(x,y);
+					stationLaPlusProche = instance.Distance(coordonnees,listeStations);
+					System.out.println(stationLaPlusProche.getNom());
+					
+				}
+			}
+		}
 
     public static void main(String[] args) {
 		ArrayList<Station> listeStations = new ArrayList<Station>();
 		listeStations = initialisation();
 		initialisationLigne(listeStations);
+		
+		menu(listeStations);
 	}	   
 }
